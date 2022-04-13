@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title></title>
+</head>
+<body>
+	<
+	<center><h1>
+		<p><h1>Apache Configuration:-</h1></p>
+
+		<p><h2>STEP 1: Configure Firewall to Allow Apache Server Access</h2></p>
+
+		<P><h3>Another mandatory step in Apache configuration is enabling the UFW<br> Firewall in Linux to accept or allow traffic to access the server via default port 80.<br>Service registers with the firewall with some application profiles.<br>The list of application profiles helps you to enable/disable Apache access.</h3></P>
+
+		<P><h2>Use the following command to list all Apache application profiles:
+			 <center><h5>sudo ufw app list</h5></center>
+
+			 <p>Output:</p>
+			 	Available applications:
+				 <h5><p>Apache</p>
+				 <p>Apache Full</p>
+				 <p>Apache Secure</p>
+				 <p>OpenSSH</h5><p>
+
+				 	<p><h3>The available profiles represent:
+
+<p>Apache: Only opens port 80 to enable unencrypted communication over the internet</p>
+<p>Apache Full: Opens both ports 80 and 443 for unencrypted and secure communication</p>
+<p>Apache Secure: Enables secure server access via HTTPS by allowing traffic on port 443</p></h3></p>
+
+<p><h4>the SSL/TLS is not enabled for the server,  therefore we will have to allow UFW access on only port 80 as follows:
+
+<p><center><h5>sudo ufw allow 'Apache'</h5></center></p>
+<p> check the firewall status by running:</p>
+
+<p><center><h5>sudo ufw status</h5></center></p>
+<p>Output:</p>
+
+<p><img src="out.JPG" alt="firewall status"/></p>
+
+</h4></p>
+		</h2></P>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</h1></center>
+	<body bgcolor="white">
+		<div class="buttons">
+			<div class="buttons">
+				
+			<center><button><a href="next2.html">NEXT PAGE</button></a></button></center><br><br>
+
+		</div>
+		<div class="buttons">
+			<center><button><a href="next.html">PREVIOUS</button></a></button></center>
+			
+		</div>
+</a>
+</center>
+</div>
+
+</body>
+</html>

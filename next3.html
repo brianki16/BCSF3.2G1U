@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title></title>
+</head>
+<body class="body">
+	<center><h1>
+		<p><h1>Setting Up a Virtual Host</h1></p>
+
+		<p>Apache server installation creates a default directory of /var/www/html in all Linux distributions. 
+			This directory contains all the files for your website,<br> but it cannot work if you want to host multiple websites on the same server.
+
+			<p>To serve multiple domains, you can use virtual hosts and create a domain directory inside the /var/www folder, as follows:<br>
+			<p><h5><center>sudo mkdir /var/www/host_example</center></h5></p>
+
+			<p>Change the ownership and file permissions of the directory using chown.</p>
+			<p><h5><center>
+				<p>sudo chown -R $current_user:$current_user /var/www/host_example</p>
+				<p>sudo chmod -R 755 /var/www/host_example</p>
+			</center></h5></p>
+
+			<p>Now open the /var/www/host_example/html/content.html file in your favorite editor and write your HTML website</p>
+
+			<p>Apache creates a configuration folder that serves as a storage place to contain a record of the virtual hosts. </p>
+			<p>The default configuration file is /etc/apache2/sites-available/000-default.conf. However, you can create a new file according to your domain name and copy/paste the configuration block available in the default file.</p>
+			<p>Edit the file with a text editor of your choice and update it with your domain name and the new directory as follows:</p>
+
+			<p><img src="edit.JPG" alt="editor"/></p>
+
+			<p><h2>Activate Your Domain Configuration File</h2></p>
+			<p>The domain configuration file host_example.conf activation requires the use of a2ensite</p>
+			<p><h5><center>sudo a2ensite host_example.conf</center></h5></p>
+
+			<p>Now restart the apache service to load the changes.</p>
+
+			<p><h5><center>sudo systemctl restart apache2</center></h5></p>
+
+			<P>Go to the browser and navigate to the domain name to check if it is serving your website:</P>
+			<p><h5><center>http://host_example</center></h5></p>
+
+			<p><h2>Test for Configuration Errors</h2></p>
+
+			<p>The apache2ctl utility allows you to check for any configuration errors for the Apache server.</p>
+			 <p>The following command must return the Syntax OK output to verify the successful no-error configuration:</p>
+
+			 <p><h5><center>sudo apache2ctl configtest
+			 	<p><h2>Output:</h2></p>
+			 Syntax OK</center></h5></p>
+
+
+
+
+
+
+
+
+
+
+
+			</h3></P>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</h1></center>
+	<body bgcolor="white">
+		<div class="buttons">
+
+			<center><button><a href="next2.html">PREVIOUS</button></a></button></center>
+			
+		</div>
+
+		
+
+</body>
+</html>
